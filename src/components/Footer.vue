@@ -3,8 +3,8 @@
   <footer class="bg-very-dark-blue py-5">
     <div class="container mx-auto flex justify-between">
       <!-- Footer Logo -->
-      <a href="">
-        <img :src="logo" alt="footer-logo" />
+      <a href="" >
+        <img class="footer-logo" :src="logo" alt="footer-logo" />
       </a>
       <!--Nav -->
       <nav class="flex gap-10 font-poppins">
@@ -41,12 +41,19 @@
             <a :href="item.url">{{ item.title }}</a>
           </li>
         </ul>
+        <!-- Social -->
+        <ul class="flex gap-3">
+          <li v-for="item in social" :key="item.id">
+            <a :href="item.url">
+              <img :src="item.icon" :alt="item.title">
+            </a>
+          </li>
+        </ul>
       </nav>
     </div>
   </footer>
 </template>
-
 <script setup>
 import { logo } from '../assets'
-import { features, resources, company } from '../config'
+import { features, resources, company,social } from '../config'
 </script>

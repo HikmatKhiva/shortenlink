@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 
+.footer-logo {
+    filter: brightness(0) invert(1);
+}
+
 .advanced_card:nth-child(2) {
     margin-top: 40px;
     position: relative;
